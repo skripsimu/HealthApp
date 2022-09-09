@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { ILLogo } from '../../assets'
+import { colors } from '../../utils';
 
-export default function Splash({navigation}) {
+export default function Splash({ navigation }) {
     useEffect(() => {
         setTimeout(() => {
             navigation.replace('GetStarted');
@@ -25,7 +26,7 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 20,
         fontWeight: '600',
-        color: '112340',
+        color: colors.secondary,
         marginTop: 20
     }
 })

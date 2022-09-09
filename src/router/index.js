@@ -21,10 +21,19 @@ export default function Router() {
             <Stack.Screen
                 name="Register"
                 component={Register}
+                options={{
+                    headerTitle: "Daftar Akun",
+                    headerShadowVisible: false,
+                    headerTitleAlign: "center",
+                    headerTitleStyle: {
+                        fontFamily: 'Nunito-SemiBold'
+                    }
+                }}
             />
             <Stack.Screen
                 name="Login"
                 component={Login}
+                options={{ headerShown: false }}
             />
         </Stack.Navigator>
     )

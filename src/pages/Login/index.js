@@ -1,11 +1,13 @@
-import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { StyleSheet, Text } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
 import { ILLogo } from '../../assets'
 import { Button, Gap, Input, Link } from '../../components'
+import { colors } from '../../utils'
 
 export default function Login() {
     return (
-        <View style={styles.page}>
+        <SafeAreaView style={styles.page}>
             <ILLogo />
             <Text style={styles.title}>Masuk dan mulai berkonsultasi</Text>
             <Input label="Email Address" />
@@ -17,7 +19,7 @@ export default function Login() {
             <Button title="Sign In" type="" />
             <Gap height={30}/>
             <Link title="Create New Account" size={12}  align="center"/>
-        </View>
+        </SafeAreaView>
     )
 }
 
@@ -30,7 +32,7 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 20,
         fontFamily: 'Nunito-SemiBold',
-        color: '#112340',
+        color: colors.secondary,
         marginVertical: 40,
         maxWidth: 153,
     }
