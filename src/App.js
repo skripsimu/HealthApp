@@ -9,6 +9,7 @@ export default function App() {
     'Nunito-Bold': require('./assets/fonts/Nunito-Bold.ttf'),
     'Nunito-ExtraBold': require('./assets/fonts/Nunito-ExtraBold.ttf'),
     'Nunito-Light': require('./assets/fonts/Nunito-Light.ttf'),
+    'Nunito-ExtraLight': require('./assets/fonts/Nunito-ExtraLight.ttf'),
     'Nunito-Regular': require('./assets/fonts/Nunito-Regular.ttf'),
     'Nunito-SemiBold': require('./assets/fonts/Nunito-SemiBold.ttf'),
   });

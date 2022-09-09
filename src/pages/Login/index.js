@@ -3,7 +3,7 @@ import { StyleSheet, Text } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { ILLogo } from '../../assets'
 import { Button, Gap, Input, Link } from '../../components'
-import { colors } from '../../utils'
+import { colors, fonts } from '../../utils'
 
 export default function Login() {
     return (
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 20,
-        fontFamily: 'Nunito-SemiBold',
+        fontFamily: fonts.primary[600],
         color: colors.text.default,
         marginVertical: 40,
         maxWidth: 153,

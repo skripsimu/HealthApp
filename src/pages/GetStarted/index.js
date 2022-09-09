@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, ImageBackground } from 'react-native'
 import React from 'react'
 import { Button, Gap } from '../../components'
 import { ILGetStarted, ILLogo } from '../../assets'
-import { colors } from '../../utils'
+import { colors, fonts } from '../../utils'
 
 export default function GetStarted({ navigation }) {
     return (
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between'
     },
     title: {
-        fontFamily: 'Nunito-SemiBold',
+        fontFamily: fonts.primary[600],
         fontSize: 32,
         paddingRight: 60,
         color: colors.white,

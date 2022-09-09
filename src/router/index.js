@@ -1,6 +1,7 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
-import { GetStarted, Login, Register, Splash } from '../pages';
+import { GetStarted, Login, Register, Splash, UploadPhoto } from '../pages';
+import { fonts } from '../utils';
 
 
 const Stack = createNativeStackNavigator();
@@ -26,7 +27,7 @@ export default function Router() {
                     headerShadowVisible: false,
                     headerTitleAlign: "center",
                     headerTitleStyle: {
-                        fontFamily: 'Nunito-SemiBold'
+                        fontFamily: fonts.primary[600]
                     }
                 }}
             />
@@ -34,6 +35,18 @@ export default function Router() {
                 name="Login"
                 component={Login}
                 options={{ headerShown: false }}
+            />
+            <Stack.Screen
+                name="UploadPhoto"
+                component={UploadPhoto}
+                options={{
+                    headerTitle: "Upload Photo",
+                    headerShadowVisible: false,
+                    headerTitleAlign: "center",
+                    headerTitleStyle: {
+                        fontFamily: fonts.primary[600]
+                    }
+                }}
             />
         </Stack.Navigator>
     )

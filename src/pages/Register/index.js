@@ -3,18 +3,23 @@ import { StyleSheet, View } from 'react-native'
 import { Button, Gap, Input } from '../../components'
 import { colors } from '../../utils'
 
-export default function Register() {
+export default function Register({ navigation }) {
     return (
         <View style={styles.page}>
-            <Input label="Full Name"/>
+            <Input label="Full Name" />
             <Gap height={24} />
-            <Input label="Pekerjaan"/>
+            <Input label="Pekerjaan" />
             <Gap height={24} />
-            <Input label="Email Address"/>
+            <Input label="Email Address" />
             <Gap height={24} />
-            <Input label="Password"/>
+            <Input label="Password" />
             <Gap height={40} />
-            <Button title="Continue" />
+            <Button
+                title="Continue"
+                onPress={
+                    () => navigation.navigate('UploadPhoto')
+                }
+            />
         </View>
     )
 }
