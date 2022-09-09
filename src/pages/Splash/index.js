@@ -19,7 +19,7 @@ export default function Splash({ navigation }) {
 
 const styles = StyleSheet.create({
     page: {
-        backgroundColor: 'white',
+        backgroundColor: colors.white,
         flex: 1, alignItems: 'center',
         justifyContent: 'center'
     },

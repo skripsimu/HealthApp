@@ -27,12 +27,12 @@ const styles = StyleSheet.create({
     page: {
         flex: 1,
         padding: 40,
-        backgroundColor: 'white'
+        backgroundColor: colors.white,
     },
     title: {
         fontSize: 20,
         fontFamily: 'Nunito-SemiBold',
-        color: colors.secondary,
+        color: colors.text.default,
         marginVertical: 40,
         maxWidth: 153,
     }

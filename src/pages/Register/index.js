@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
 import { Button, Gap, Input } from '../../components'
+import { colors } from '../../utils'
 
 export default function Register() {
     return (
@@ -23,6 +24,6 @@ const styles = StyleSheet.create({
         padding: 40,
         paddingTop: 10,
         flex: 1,
-        backgroundColor: 'white'
+        backgroundColor: colors.white
     }
 })
