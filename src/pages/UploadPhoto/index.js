@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    borderColor: colors.input.borderColor,
+    borderColor: colors.border.primary,
     borderRadius: 130 / 2,
   },
   addPhoto: {

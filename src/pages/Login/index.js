@@ -5,20 +5,20 @@ import { ILLogo } from '../../assets'
 import { Button, Gap, Input, Link } from '../../components'
 import { colors, fonts } from '../../utils'
 
-export default function Login() {
+export default function Login({ navigation }) {
     return (
         <SafeAreaView style={styles.page}>
             <ILLogo />
             <Text style={styles.title}>Masuk dan mulai berkonsultasi</Text>
             <Input label="Email Address" />
-            <Gap height={24}/>
+            <Gap height={24} />
             <Input label="Password" />
-            <Gap height={10}/>
-            <Link title="Forgot My password" size={14}/>
-            <Gap height={40}/>
-            <Button title="Sign In" type="" />
-            <Gap height={30}/>
-            <Link title="Create New Account" size={12}  align="center"/>
+            <Gap height={10} />
+            <Link title="Forgot My password" size={14} />
+            <Gap height={40} />
+            <Button title="Sign In" onPress={() => navigation.replace('MainApp')} />
+            <Gap height={30} />
+            <Link title="Create New Account" size={12} align="center" />
         </SafeAreaView>
     )
 }

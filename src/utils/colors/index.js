@@ -1,8 +1,11 @@
 const mainColors = {
     green1: '#0BCAD4',
+    green2: '#EDFCFD',
     dark1: '#112340',
+    dark2: '#495A75',
     grey1: '#7D8797',
     grey2: '#E9E9E9',
+    grey3: '#EEEEEE',
 }
 
 
@@ -11,12 +14,15 @@ export const colors = {
     secondary: mainColors.dark1,
     white: 'white',
     black: 'black',
-    input: {
-        borderColor: mainColors.grey2,
+    border: {
+        primary: mainColors.grey2,
+        secondary: mainColors.grey3,
     },
     text: {
         default: mainColors.dark1,
-        secondary: mainColors.grey1
+        secondary: mainColors.grey1,
+        inactive: mainColors.dark2,
+        active: mainColors.green1,
     },
     button: {
         primary: {
@@ -27,5 +33,6 @@ export const colors = {
             background: 'white',
             text: mainColors.dark1
         }
-    }
+    },
+    cardLight: mainColors.green2
 }
