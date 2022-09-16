@@ -18,6 +18,7 @@ export default function BottomNavigator({ state, descriptors, navigation }) {
         const isFocused = state.index === index;
 
         const onPress = () => {
+          console.log("onPress clicked");
           const event = navigation.emit({
             type: "tabPress",
             target: route.key,
