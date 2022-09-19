@@ -1,5 +1,6 @@
 import React from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { JSONDoctorCategory } from "../../assets";
 import {
   DoctorCategories,
   Gap,
@@ -9,7 +10,7 @@ import {
 } from "../../components";
 import { colors, fonts } from "../../utils";
 
-export default function Doctor() {
+export default function Doctor({ navigation }) {
   return (
     <View style={styles.page}>
       <View style={styles.content}>
@@ -24,10 +25,15 @@ export default function Doctor() {
               <ScrollView horizontal showsHorizontalScrollIndicator={false}>
                 <View style={styles.categories}>
                   <Gap width={16} />
-                  <DoctorCategories />
-                  <DoctorCategories />
-                  <DoctorCategories />
-                  <DoctorCategories />
+                  {JSONDoctorCategory.data.map((item) => {
+                    return (
+                      <DoctorCategories
+                        key={item.id}
+                        category={item.category}
+                        onPress={() => navigation.navigate("ChooseDoctor")}
+                      />
+                    );
+                  })}
                   <Gap width={6} />
                 </View>
               </ScrollView>
@@ -59,7 +65,7 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 20,
     borderBottomLeftRadius: 20,
   },
-  sectionWrapper: {paddingHorizontal: 16},
+  sectionWrapper: { paddingHorizontal: 16 },
   welcome: {
     fontSize: 20,
     fontFamily: fonts.primary[600],

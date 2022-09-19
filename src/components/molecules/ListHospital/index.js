@@ -3,13 +3,13 @@ import React from "react";
 import { DummyHospital2 } from "../../../assets";
 import { colors, fonts } from "../../../utils";
 
-export default function ListHospital() {
+export default function ListHospital(props) {
   return (
     <View style={styles.container}>
-      <Image source={DummyHospital2} style={styles.img} />
+      <Image source={props.img} style={styles.img} />
       <View>
-        <Text style={styles.title}>Rumah Sakit Citra Bunga Merdeka</Text>
-        <Text style={styles.subtitle}>Jln. Surya Sejahtera 20</Text>
+        <Text style={styles.title}>{props.name}</Text>
+        <Text style={styles.subtitle}>{props.address}</Text>
       </View>
     </View>
   );

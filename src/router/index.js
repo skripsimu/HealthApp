@@ -12,6 +12,7 @@ import {
   Splash,
   UploadPhoto,
 } from "../pages";
+import ChooseDoctor from "../pages/ChooseDoctor";
 import { fonts } from "../utils";
 
 const Stack = createNativeStackNavigator();
@@ -84,6 +85,11 @@ export default function Router() {
       <Stack.Screen
         name="MainApp"
         component={MainApp}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="ChooseDoctor"
+        component={ChooseDoctor}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

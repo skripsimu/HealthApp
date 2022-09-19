@@ -5,6 +5,7 @@ import RatedDoctor from "./RatedDoctor";
 import NewsItem from "./NewsItem";
 import ListDoctor from "./ListDoctor";
 import ListHospital from "./ListHospital";
+import Header from "./Header";
 
 export {
   BottomNavigator,
@@ -14,4 +15,5 @@ export {
   NewsItem,
   ListDoctor,
   ListHospital,
+  Header,
 };

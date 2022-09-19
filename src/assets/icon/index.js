@@ -7,6 +7,9 @@ import IconMessagesActive from "./ic_messages_active.svg";
 import IconHospitals from "./ic_hospitals.svg";
 import IconHospitalsActive from "./ic_hospitals_active.svg";
 import IconStar from "./ic_star.svg";
+import IconArrowIosForward from "./ic_arrow_ios_forward.svg";
+import IconBackDark from "./ic-back-dark.svg";
+import IconBackLight from "./ic-back-light.svg";
 
 export {
   IconAddAvatar,
@@ -18,4 +21,7 @@ export {
   IconHospitals,
   IconHospitalsActive,
   IconStar,
+  IconArrowIosForward,
+  IconBackDark,
+  IconBackLight,
 };
