@@ -10,10 +10,9 @@ import {
   Messages,
   Register,
   Splash,
-  UploadPhoto,
+  UploadPhoto
 } from "../pages";
 import ChooseDoctor from "../pages/ChooseDoctor";
-import { fonts } from "../utils";
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -56,14 +55,7 @@ export default function Router() {
       <Stack.Screen
         name="Register"
         component={Register}
-        options={{
-          headerTitle: "Daftar Akun",
-          headerShadowVisible: false,
-          headerTitleAlign: "center",
-          headerTitleStyle: {
-            fontFamily: fonts.primary[600],
-          },
-        }}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="Login"
@@ -73,14 +65,7 @@ export default function Router() {
       <Stack.Screen
         name="UploadPhoto"
         component={UploadPhoto}
-        options={{
-          headerTitle: "Upload Photo",
-          headerShadowVisible: false,
-          headerTitleAlign: "center",
-          headerTitleStyle: {
-            fontFamily: fonts.primary[600],
-          },
-        }}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="MainApp"

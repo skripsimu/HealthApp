@@ -1,41 +1,47 @@
-import { Image, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { IconAddAvatar, ILNoAvatar } from '../../assets'
-import { colors, fonts } from '../../utils'
-import { Button, Gap, Link } from '../../components'
+import { Image, StyleSheet, Text, View } from "react-native";
+import React from "react";
+import { IconAddAvatar, ILNoAvatar } from "../../assets";
+import { colors, fonts } from "../../utils";
+import { Button, Gap, Header, Link } from "../../components";
 
-export default function UploadPhoto() {
+export default function UploadPhoto({ navigation }) {
   return (
     <View style={styles.page}>
-      <View style={styles.profile}>
-        <View style={styles.avatarWrapper}>
-          <Image style={styles.avatar} source={ILNoAvatar} />
-          <IconAddAvatar style={styles.addPhoto} />
+      <Header onPress={() => navigation.goBack()} title="Upload Foto" />
+      <View style={styles.content}>
+        <View style={styles.profile}>
+          <View style={styles.avatarWrapper}>
+            <Image style={styles.avatar} source={ILNoAvatar} />
+            <IconAddAvatar style={styles.addPhoto} />
+          </View>
+          <Text style={styles.name}>Harakiri Kanan</Text>
+          <Text style={styles.job}>Mobile Developer</Text>
         </View>
-        <Text style={styles.name}>Harakiri Kanan</Text>
-        <Text style={styles.job}>Mobile Developer</Text>
-      </View>
-      <View>
-        <Button title="Upload and Continue" />
-        <Gap height={30} />
-        <Link title="Skip for this" align="center" />
+        <View>
+          <Button title="Upload and Continue" />
+          <Gap height={30} />
+          <Link title="Skip for this" align="center" />
+        </View>
       </View>
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
   page: {
     flex: 1,
+  },
+  content: {
+    flex: 1,
     paddingHorizontal: 40,
     paddingBottom: 64,
     backgroundColor: colors.white,
-    justifyContent: 'space-between'
+    justifyContent: "space-between",
   },
   profile: {
-    alignItems: 'center',
+    alignItems: "center",
     flex: 1,
-    justifyContent: 'center'
+    justifyContent: "center",
   },
   avatar: {
     width: 110,
@@ -45,26 +51,26 @@ const styles = StyleSheet.create({
     width: 130,
     height: 130,
     borderWidth: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
     borderColor: colors.border.primary,
     borderRadius: 130 / 2,
   },
   addPhoto: {
-    position: 'absolute',
+    position: "absolute",
     bottom: 8,
     right: 6,
   },
   name: {
     fontSize: 24,
     color: colors.text.default,
-    textAlign: 'center',
-    fontFamily: fonts.primary[600]
+    textAlign: "center",
+    fontFamily: fonts.primary[600],
   },
   job: {
     fontSize: 18,
     fontFamily: fonts.primary.normal,
-    textAlign: 'center',
-    color: colors.text.secondary
-  }
-})
+    textAlign: "center",
+    color: colors.text.secondary,
+  },
+});
