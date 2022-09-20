@@ -22,6 +22,7 @@ export default function UserProfile({navigation}) {
         message="Last updated yesterday"
         type="choose-menu"
         icon="edit-profile"
+        onPress={() => navigation.navigate("EditProfile")}
       />
       <ListItem
         name="Language"

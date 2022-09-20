@@ -14,6 +14,7 @@ import {
   Splash,
   UploadPhoto,
   UserProfile,
+  EditProfile,
 } from "../pages";
 
 const Stack = createNativeStackNavigator();
@@ -87,6 +88,11 @@ export default function Router() {
       <Stack.Screen
         name="UserProfile"
         component={UserProfile}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="EditProfile"
+        component={EditProfile}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

@@ -15,10 +15,14 @@ export default function UserProfileHeader({ img, title, subtitle, iconType}) {
     <View style={styles.profileAvatar}>
       <View style={styles.avatarWrapper}>
         <Image style={styles.avatar} source={img} />
-        <Icon style={styles.addPhoto}/>
+        <Icon style={styles.addPhoto} />
       </View>
-      {title && <Text style={styles.name}>{title}</Text>}
-      <Text style={styles.job}>{subtitle}</Text>
+      {title && (
+        <View>
+          <Text style={styles.name}>{title}</Text>
+          <Text style={styles.job}>{subtitle}</Text>
+        </View>
+      )}
     </View>
   );
 }
