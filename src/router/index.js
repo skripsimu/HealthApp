@@ -10,8 +10,9 @@ import {
   Messages,
   Register,
   Splash,
-  UploadPhoto
+  UploadPhoto,
 } from "../pages";
+import ChatRoom from "../pages/ChatRoom";
 import ChooseDoctor from "../pages/ChooseDoctor";
 
 const Stack = createNativeStackNavigator();
@@ -75,6 +76,11 @@ export default function Router() {
       <Stack.Screen
         name="ChooseDoctor"
         component={ChooseDoctor}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="ChatRoom"
+        component={ChatRoom}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

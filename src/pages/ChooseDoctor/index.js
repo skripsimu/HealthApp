@@ -1,13 +1,14 @@
-import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { Header, ListDoctor } from "../../components";
+import { FlatList, StyleSheet, View } from "react-native";
 import {
   DummyDoctor4,
   DummyDoctor5,
   DummyDoctor6,
   DummyDoctor7,
   DummyDoctor8,
+  JSONDoctors
 } from "../../assets";
+import { Header, ListDoctor } from "../../components";
 import { colors } from "../../utils";
 
 export default function ChooseDoctor({ navigation }) {
@@ -18,35 +19,23 @@ export default function ChooseDoctor({ navigation }) {
         type="dark"
         onPress={() => navigation.goBack()}
       />
-      <ListDoctor
-        type="choose-doctor"
-        img={DummyDoctor4}
-        name="Alexander Jannie"
-        message="Wanita"
-      />
-      <ListDoctor
-        type="choose-doctor"
-        img={DummyDoctor5}
-        name="John McParker Steve"
-        message="Pria"
-      />
-      <ListDoctor
-        type="choose-doctor"
-        img={DummyDoctor6}
-        name="Nairobi Putri Hayza"
-        message="Wanita"
-      />
-      <ListDoctor
-        type="choose-doctor"
-        img={DummyDoctor7}
-        name="James Rivillia"
-        message="Pria"
-      />
-      <ListDoctor
-        type="choose-doctor"
-        img={DummyDoctor8}
-        name="Liu Yue Tian Park"
-        message="Wanita"
+      <FlatList
+        data={JSONDoctors.data}
+        keyExtractor={({ id }, index) => id}
+        renderItem={({ item }) => (
+          <ListDoctor
+            key={item.id}
+            type="choose-doctor"
+            img={DummyDoctor4}
+            name={item.name}
+            message={item.gender}
+            onPress={() =>
+              navigation.navigate("ChatRoom", {
+                doctor: item,
+              })
+            }
+          />
+        )}
       />
     </View>
   );

@@ -10,6 +10,8 @@ import IconStar from "./ic_star.svg";
 import IconArrowIosForward from "./ic_arrow_ios_forward.svg";
 import IconBackDark from "./ic-back-dark.svg";
 import IconBackLight from "./ic-back-light.svg";
+import IconSendLight from "./ic-send-light.svg";
+import IconSendDark from "./ic-send-dark.svg";
 
 export {
   IconAddAvatar,
@@ -24,4 +26,6 @@ export {
   IconArrowIosForward,
   IconBackDark,
   IconBackLight,
+  IconSendLight,
+  IconSendDark,
 };

@@ -1,11 +1,11 @@
-import { Image, StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { DummyDoctor2, IconArrowIosForward } from "../../../assets";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { IconArrowIosForward } from "../../../assets";
 import { colors, fonts } from "../../../utils";
 
 export default function ListDoctor(props) {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={props.onPress}>
       <View style={styles.content}>
         <Image source={props.img} style={styles.avatar} />
         <View>
@@ -14,7 +14,7 @@ export default function ListDoctor(props) {
         </View>
       </View>
       {props.type === "choose-doctor" && <IconArrowIosForward />}
-    </View>
+    </TouchableOpacity>
   );
 }
 

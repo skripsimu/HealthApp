@@ -6,6 +6,8 @@ import NewsItem from "./NewsItem";
 import ListDoctor from "./ListDoctor";
 import ListHospital from "./ListHospital";
 import Header from "./Header";
+import ChatItem from "./ChatItem";
+import ChatInput from "./ChatInput";
 
 export {
   BottomNavigator,
@@ -16,4 +18,6 @@ export {
   ListDoctor,
   ListHospital,
   Header,
+  ChatItem,
+  ChatInput,
 };

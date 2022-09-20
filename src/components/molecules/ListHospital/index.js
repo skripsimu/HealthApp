@@ -1,6 +1,5 @@
-import { Image, StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { DummyHospital2 } from "../../../assets";
+import { Image, StyleSheet, Text, View } from "react-native";
 import { colors, fonts } from "../../../utils";
 
 export default function ListHospital(props) {
