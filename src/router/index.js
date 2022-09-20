@@ -3,6 +3,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React from "react";
 import { BottomNavigator } from "../components";
 import {
+  ChatRoom,
+  ChooseDoctor,
   Doctor,
   GetStarted,
   Hospitals,
@@ -11,9 +13,8 @@ import {
   Register,
   Splash,
   UploadPhoto,
+  UserProfile,
 } from "../pages";
-import ChatRoom from "../pages/ChatRoom";
-import ChooseDoctor from "../pages/ChooseDoctor";
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -81,6 +82,11 @@ export default function Router() {
       <Stack.Screen
         name="ChatRoom"
         component={ChatRoom}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="UserProfile"
+        component={UserProfile}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

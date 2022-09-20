@@ -1,14 +1,9 @@
 import React from "react";
 import { FlatList, StyleSheet, View } from "react-native";
 import {
-  DummyDoctor4,
-  DummyDoctor5,
-  DummyDoctor6,
-  DummyDoctor7,
-  DummyDoctor8,
-  JSONDoctors
+  DummyDoctor4, JSONDoctors
 } from "../../assets";
-import { Header, ListDoctor } from "../../components";
+import { Header, ListItem } from "../../components";
 import { colors } from "../../utils";
 
 export default function ChooseDoctor({ navigation }) {
@@ -23,9 +18,9 @@ export default function ChooseDoctor({ navigation }) {
         data={JSONDoctors.data}
         keyExtractor={({ id }, index) => id}
         renderItem={({ item }) => (
-          <ListDoctor
+          <ListItem
             key={item.id}
-            type="choose-doctor"
+            type="choose-menu"
             img={DummyDoctor4}
             name={item.name}
             message={item.gender}

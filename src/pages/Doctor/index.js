@@ -17,7 +17,7 @@ export default function Doctor({ navigation }) {
         <ScrollView showsVerticalScrollIndicator={false}>
           <Gap height={50} />
           <View style={styles.sectionWrapper}>
-            <HomeProfile />
+            <HomeProfile onPress={() => navigation.navigate("UserProfile")} />
             <Text style={styles.welcome}>
               Mau konsultasi dengan siapa hari ini?
             </Text>

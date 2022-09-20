@@ -1,8 +1,8 @@
-import { Image, StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { IconAddAvatar, ILNoAvatar } from "../../assets";
-import { colors, fonts } from "../../utils";
-import { Button, Gap, Header, Link } from "../../components";
+import { StyleSheet, View } from "react-native";
+import { ILNoAvatar } from "../../assets";
+import { Button, Gap, Header, Link, UserProfileHeader } from "../../components";
+import { colors } from "../../utils";
 
 export default function UploadPhoto({ navigation }) {
   return (
@@ -10,12 +10,12 @@ export default function UploadPhoto({ navigation }) {
       <Header onPress={() => navigation.goBack()} title="Upload Foto" />
       <View style={styles.content}>
         <View style={styles.profile}>
-          <View style={styles.avatarWrapper}>
-            <Image style={styles.avatar} source={ILNoAvatar} />
-            <IconAddAvatar style={styles.addPhoto} />
-          </View>
-          <Text style={styles.name}>Harakiri Kanan</Text>
-          <Text style={styles.job}>Mobile Developer</Text>
+          <UserProfileHeader
+            img={ILNoAvatar}
+            title="Harakiri Kanan"
+            subtitle="Dokter Bedah"
+            iconType="add"
+          />
         </View>
         <View>
           <Button title="Upload and Continue" />
@@ -39,38 +39,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   profile: {
-    alignItems: "center",
+    justifyContent: "center",
     flex: 1,
-    justifyContent: "center",
-  },
-  avatar: {
-    width: 110,
-    height: 110,
-  },
-  avatarWrapper: {
-    width: 130,
-    height: 130,
-    borderWidth: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    borderColor: colors.border.primary,
-    borderRadius: 130 / 2,
-  },
-  addPhoto: {
-    position: "absolute",
-    bottom: 8,
-    right: 6,
-  },
-  name: {
-    fontSize: 24,
-    color: colors.text.default,
-    textAlign: "center",
-    fontFamily: fonts.primary[600],
-  },
-  job: {
-    fontSize: 18,
-    fontFamily: fonts.primary.normal,
-    textAlign: "center",
-    color: colors.text.secondary,
   },
 });

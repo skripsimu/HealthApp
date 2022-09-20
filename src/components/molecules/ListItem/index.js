@@ -1,19 +1,33 @@
 import React from "react";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { IconArrowIosForward } from "../../../assets";
+import { IconArrowIosForward, IconEditProfile, IconHelp, IconLanguage, IconRate } from "../../../assets";
 import { colors, fonts } from "../../../utils";
 
-export default function ListDoctor(props) {
+export default function ListItem(props) {
+  const Icon = () => {
+    if (props.icon == 'edit-profile') {
+      return <IconEditProfile style={styles.icon}/>;
+    }
+    if (props.icon == 'language') {
+      return <IconLanguage style={styles.icon}/>;
+    }
+    if (props.icon == 'rate') {
+      return <IconRate style={styles.icon}/>;
+    }
+    if (props.icon == 'help') {
+      return <IconHelp style={styles.icon}/>;
+    }
+  };
   return (
     <TouchableOpacity style={styles.container} onPress={props.onPress}>
       <View style={styles.content}>
-        <Image source={props.img} style={styles.avatar} />
+        {props.icon ? <Icon /> : <Image source={props.img} style={styles.avatar} />}
         <View>
           <Text style={styles.name}>{props.name}</Text>
           <Text style={styles.message}>{props.message}</Text>
         </View>
       </View>
-      {props.type === "choose-doctor" && <IconArrowIosForward />}
+      {props.type === "choose-menu" && <IconArrowIosForward />}
     </TouchableOpacity>
   );
 }
@@ -27,13 +41,18 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
   },
-  content: { flex: 1, flexDirection: "row" },
+  content: {
+    flex: 1,
+    flexDirection: "row",
+    alignItems: "center",
+  },
   avatar: {
     width: 46,
     height: 46,
     borderRadius: 46 / 2,
     marginRight: 12,
   },
+  icon: { marginRight: 16 },
   name: {
     fontSize: 16,
     fontFamily: fonts.primary[400],

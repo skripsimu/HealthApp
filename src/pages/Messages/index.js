@@ -1,11 +1,11 @@
-import { StyleSheet, Text, View } from "react-native";
 import React, { useState } from "react";
-import { ListDoctor } from "../../components/molecules";
-import { colors, fonts } from "../../utils";
+import { StyleSheet, Text, View } from "react-native";
 import { DummyDoctor1, DummyDoctor2, DummyDoctor3 } from "../../assets";
+import { ListItem } from "../../components";
+import { colors, fonts } from "../../utils";
 
 export default function Messages() {
-  const [doctors, setDoctors] = useState([
+  const [doctors] = useState([
     {
       id: 1,
       img: DummyDoctor1,
@@ -32,7 +32,7 @@ export default function Messages() {
         <Text style={styles.title}>Messages</Text>
         {doctors.map((doctor) => {
           return (
-            <ListDoctor
+            <ListItem
               key={doctor.id}
               name={doctor.name}
               message={doctor.message}
