@@ -9,6 +9,7 @@ import Header from "./Header";
 import ChatItem from "./ChatItem";
 import ChatInput from "./ChatInput";
 import UserProfileHeader from "./UserProfileHeader";
+import ProfileItem from "./ProfileItem";
 
 export {
   BottomNavigator,
@@ -22,4 +23,5 @@ export {
   ChatItem,
   ChatInput,
   UserProfileHeader,
+  ProfileItem,
 };

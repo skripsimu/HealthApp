@@ -1,7 +1,7 @@
 import React from 'react';
-import { ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { ScrollView, StyleSheet, View } from 'react-native';
 import { DummyDoctor2 } from '../../assets';
-import {Button, Gap, Header, Input, UserProfileHeader} from '../../components'
+import { Button, Gap, Header, Input, UserProfileHeader } from '../../components';
 import { colors } from '../../utils';
 
 export default function EditProfile() {

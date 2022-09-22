@@ -10,6 +10,7 @@ import ChatRoom from './ChatRoom';
 import UserProfile from './UserProfile';
 import ChooseDoctor from './ChooseDoctor';
 import EditProfile from './EditProfile';
+import DoctorProfile from './DoctorProfile';
 
 export {
   Splash,
@@ -24,4 +25,5 @@ export {
   UserProfile,
   ChooseDoctor,
   EditProfile,
+  DoctorProfile,
 };

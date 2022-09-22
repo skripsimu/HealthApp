@@ -39,9 +39,21 @@ export default function Doctor({ navigation }) {
               </ScrollView>
             </View>
             <Text style={styles.sectionLabel}>Top Rated Doctors</Text>
-            <RatedDoctor />
-            <RatedDoctor />
-            <RatedDoctor />
+            <RatedDoctor
+              name="Budi Sutini"
+              desc="Pediatrician"
+              onPress={() => navigation.navigate("DoctorProfile")}
+            />
+            <RatedDoctor
+              name="Anita Rianto"
+              desc="Dentist"
+              onPress={() => navigation.navigate("DoctorProfile")}
+            />
+            <RatedDoctor
+              name="Nadira Amara"
+              desc="Bedahis"
+              onPress={() => navigation.navigate("DoctorProfile")}
+            />
             <Text style={styles.sectionLabel}>Good News</Text>
           </View>
           <NewsItem />

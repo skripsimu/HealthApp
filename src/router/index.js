@@ -15,6 +15,7 @@ import {
   UploadPhoto,
   UserProfile,
   EditProfile,
+  DoctorProfile,
 } from "../pages";
 
 const Stack = createNativeStackNavigator();
@@ -93,6 +94,11 @@ export default function Router() {
       <Stack.Screen
         name="EditProfile"
         component={EditProfile}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="DoctorProfile"
+        component={DoctorProfile}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

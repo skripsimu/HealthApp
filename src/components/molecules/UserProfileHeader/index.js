@@ -1,7 +1,7 @@
 import { Image, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { colors, fonts } from '../../../utils';
-import { IconAddAvatar, IconRemoveAvatar } from '../../../assets';
+import { IconAddAvatar, IconFemale, IconMale, IconRemoveAvatar } from '../../../assets';
 
 export default function UserProfileHeader({ img, title, subtitle, iconType}) {
   const Icon = () => {
@@ -9,6 +9,10 @@ export default function UserProfileHeader({ img, title, subtitle, iconType}) {
       return <IconRemoveAvatar style={styles.addPhoto} />;
     } else if (iconType === "add") {
       return <IconAddAvatar style={styles.addPhoto} />;
+    } else if (iconType === "male") {
+      return <IconMale style={styles.addPhoto} />;
+    } else if (iconType === "female") {
+      return <IconFemale style={styles.addPhoto} />;
     }
   };
   return (
